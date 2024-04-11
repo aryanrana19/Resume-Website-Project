@@ -618,6 +618,7 @@ p {
 		padding-left: 60px;
 	}
 
+
 	.about .col-left .about-img::after {
 		left: -45px;
 		top: 34px;
@@ -668,6 +669,13 @@ p {
 		padding-left: 20px;
 	}
 	
+}
+
+/* MEDIA QUERY FOR MOBILE */
+@media only screen and (max-width: 425px){
+	.col-right h1 {
+		padding-top: 25px;
+	}
 }
 
 /* Media Query For Desktop */
