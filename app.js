@@ -43,11 +43,9 @@ function updateTime() {
 	var seconds = now.getSeconds();
 	var ampm = hours >= 12 ? 'PM' : 'AM';
 	
-	// Convert hours to 12-hour format
 	hours = hours % 12;
-	hours = hours ? hours : 12; // 12 should be displayed as 12, not as 0
+	hours = hours ? hours : 12; 
 	
-	// Add leading zeros if needed
 	hours = (hours < 10 ? '0' : '') + hours;
 	minutes = (minutes < 10 ? '0' : '') + minutes;
 	seconds = (seconds < 10 ? '0' : '') + seconds;
@@ -56,9 +54,7 @@ function updateTime() {
 	
 	document.getElementById('time').textContent = timeString;
 }
-	
-// Update time every second
+
 setInterval(updateTime, 1000);
-	
-// Initial call to display time immediately
+
 updateTime();
