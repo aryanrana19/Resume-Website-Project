@@ -185,7 +185,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/hero-bg.png);
+	background-image: url(./img/hero-bg2.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -354,10 +354,6 @@ p {
 	padding-bottom: 10px;
 }
 
-/* .project-info a:hover{
-	text-decoration: underline;
-} */
-
 .project-info h2 {
 	font-size: 1.8rem;
 	font-weight: 500;
@@ -401,6 +397,7 @@ p {
 .col-left {
 	width: 250px;
 	height: 360px;
+	padding-bottom: 20px;
 }
 .col-right {
 	width: 100%;
