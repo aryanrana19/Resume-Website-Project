@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Aryan Rana Resume</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
-<body>
+<body ng-app="validationApp">
   <!-- Header -->
   <section id="header">
     <div class="header container">
@@ -196,6 +197,45 @@
   </section>
   <!-- End Contact Section -->
 
+  <!-- FORM SECTION -->
+<section class="main-form">
+  <div ng-controller="mainController">
+    <form name="userForm" ng-submit="submitForm()" novalidate>
+        <div class="form-item">
+            <label for="name">Enter your Name</label>
+            <input type="text" ng-model="name" name="name" required>
+            <div class="alert-red" ng-show="userForm.name.$error.required">Name is required.</div>
+        </div>
+        <div class="form-item">
+            <label for="age">Enter your Age</label>
+            <input type="number" ng-model="age" name="age" required>
+            <div class="alert-red" ng-show="userForm.age.$error.required">Age is required.</div>
+        </div>
+        <div class="form-item">
+            <label for="email">Enter your Email</label>
+            <input type="email" ng-model="email" name="email" required>
+            <div class="alert-red" ng-show="userForm.email.$error.required">Email is required.</div>
+            <div class="alert-red" ng-show="userForm.email.$error.email">Invalid email address.</div>
+        </div>
+        <div class="form-item">
+            <label for="course">Enter your Course</label>
+            <input type="text" ng-model="course" name="course" required>
+            <div class="alert-red" ng-show="userForm.course.$error.required">Course is required.</div>
+        </div>
+        <div class="form-item">
+            <label for="Address">Enter your Address</label>
+            <input type="text" ng-model="address" name="address" required>
+            <div class="alert-red" ng-show="userForm.address.$error.required">Address is required.</div>
+        </div>
+        <div class="form-item">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+</section>
+
+
+
   <!-- Footer -->
   <section id="footer">
     <div class="footer container">
@@ -217,6 +257,9 @@
       <p>Copyright &copy; 2024 Aryan. All rights reserved</p>
     </div>
   </section>
+  <div class="clock">
+    <div id="time"></div>
+</div>
   <!-- End Footer -->
   <script src="./app.js"></script>
 </body>
