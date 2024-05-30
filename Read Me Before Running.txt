@@ -1,3 +1,0 @@
-PLease connect to internet, because some images and fonts are imported from internet.
-
-Or OPEN WITH LIVE SERVER
